@@ -3,7 +3,7 @@ name: Gestfin Web Deploy
 on:
   push:
     branches:
-      - main
+      - 'v*'
 
 permissions:
   contents: write
@@ -19,6 +19,9 @@ jobs:
       - uses: subosito/flutter-action@v2
         with:
           flutter-version: '3.24.3'
+
+      - name: Limpar Flutter Build
+        run: flutter clean
 
       - name: Habilitar Flutter Web
         run: flutter config --enable-web
