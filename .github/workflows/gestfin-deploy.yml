@@ -32,6 +32,9 @@ jobs:
       - name: Copiando CNAME para pasta de build
         run: cp CNAME ./build/web/
 
+      - name: Fix 404 routing for GitHub Pages
+        run: cp ./build/web/index.html ./build/web/404.html
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
