@@ -1,4 +1,4 @@
-# gestfin_web
+# gestfin_frontend
 
 A new Flutter project.
 

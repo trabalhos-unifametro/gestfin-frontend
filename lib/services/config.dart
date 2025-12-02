@@ -1,6 +1,6 @@
 import 'dart:convert';
-import 'package:gestfin_web/services/constants.dart';
-import 'package:gestfin_web/services/session.dart';
+import 'package:gestfin_frontend/services/constants.dart';
+import 'package:gestfin_frontend/services/session.dart';
 import 'package:http/http.dart' as http;
 
 enum TypeResponse {

@@ -1,5 +1,5 @@
-import 'package:gestfin_web/services/config.dart';
-import 'package:gestfin_web/services/constants.dart';
+import 'package:gestfin_frontend/services/config.dart';
+import 'package:gestfin_frontend/services/constants.dart';
 
 class UserService {
   final api = Api();

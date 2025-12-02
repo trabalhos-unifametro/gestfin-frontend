@@ -1,10 +1,10 @@
 import 'dart:html';
 
 import 'package:flutter/material.dart';
-import 'package:gestfin_web/services/user_service.dart';
-import 'package:gestfin_web/utils/alerts.dart';
-import 'package:gestfin_web/utils/app_colors.dart';
-import 'package:gestfin_web/widgets/base/BaseLayout.dart';
+import 'package:gestfin_frontend/services/user_service.dart';
+import 'package:gestfin_frontend/utils/alerts.dart';
+import 'package:gestfin_frontend/utils/app_colors.dart';
+import 'package:gestfin_frontend/widgets/base/BaseLayout.dart';
 import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';

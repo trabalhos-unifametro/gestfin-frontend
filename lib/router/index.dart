@@ -1,4 +1,4 @@
-import 'package:gestfin_web/views/expenses/index.dart';
+import 'package:gestfin_frontend/views/expenses/index.dart';
 import 'package:go_router/go_router.dart';
 import '../services/session.dart';
 import '../views/auth/login.dart';

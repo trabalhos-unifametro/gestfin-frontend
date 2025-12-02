@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:gestfin_web/services/session.dart';
-import 'package:gestfin_web/utils/app_colors.dart';
+import 'package:gestfin_frontend/services/session.dart';
+import 'package:gestfin_frontend/utils/app_colors.dart';
 import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';

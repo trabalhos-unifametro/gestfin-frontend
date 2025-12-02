@@ -1,8 +1,8 @@
 import 'dart:ui';
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/material.dart';
-import 'package:gestfin_web/utils/app_colors.dart';
-import 'package:gestfin_web/widgets/base/Footer.dart';
+import 'package:gestfin_frontend/utils/app_colors.dart';
+import 'package:gestfin_frontend/widgets/base/Footer.dart';
 import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';

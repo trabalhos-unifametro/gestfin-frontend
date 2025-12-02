@@ -1,6 +1,6 @@
 {
-    "name": "gestfin_web",
-    "short_name": "gestfin_web",
+    "name": "gestfin_frontend",
+    "short_name": "gestfin_frontend",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

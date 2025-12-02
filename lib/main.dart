@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:gestfin_web/providers/index.dart';
-import 'package:gestfin_web/router/index.dart';
+import 'package:gestfin_frontend/providers/index.dart';
+import 'package:gestfin_frontend/router/index.dart';
 import 'package:flutter_web_plugins/url_strategy.dart';
-import 'package:gestfin_web/services/session.dart';
+import 'package:gestfin_frontend/services/session.dart';
 import 'package:provider/provider.dart';
 
 void main() {
