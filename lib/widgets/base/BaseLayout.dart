@@ -12,7 +12,8 @@ import '../../utils/alerts.dart';
 
 class BaseLayout extends StatefulWidget {
   Widget body;
-  BaseLayout({super.key, required this.body});
+  String title;
+  BaseLayout({super.key, required this.body, required this.title});
 
   @override
   _BaseLayoutState createState() => _BaseLayoutState();
@@ -39,52 +40,56 @@ class _BaseLayoutState extends State<BaseLayout> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: AppColors.whiteSmoke,
-      appBar: AppBar(
-        automaticallyImplyLeading: false,
-        scrolledUnderElevation: 0,
-        toolbarHeight: heightTopBar,
-        backgroundColor: AppColors.primary,
-        titleSpacing: 0,
-        title: Container(
-          color: AppColors.primary,
-          padding: const EdgeInsets.symmetric(horizontal: 30),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              MouseRegion(
-                cursor: SystemMouseCursors.click,
-                child: GestureDetector(
-                  child: Image.asset('images/png/logo.png', fit: BoxFit.cover, width: 220,),
-                  onTap: () {
-                    context.go('/');
-                  },
-                ),
+    return Title(
+      title: "GestFin - ${widget.title}",
+      color: AppColors.yellowGold,
+      child: Scaffold(
+          backgroundColor: AppColors.whiteSmoke,
+          appBar: AppBar(
+            automaticallyImplyLeading: false,
+            scrolledUnderElevation: 0,
+            toolbarHeight: heightTopBar,
+            backgroundColor: AppColors.primary,
+            titleSpacing: 0,
+            title: Container(
+              color: AppColors.primary,
+              padding: const EdgeInsets.symmetric(horizontal: 30),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  MouseRegion(
+                    cursor: SystemMouseCursors.click,
+                    child: GestureDetector(
+                      child: Image.asset('images/png/logo.png', fit: BoxFit.cover, width: 220,),
+                      onTap: () {
+                        context.go('/');
+                      },
+                    ),
+                  ),
+                  if (appState.isLoggedIn == true) menuOptions()
+                  else signInOrRegister()
+                ],
               ),
-              if (appState.isLoggedIn == true) menuOptions()
-              else signInOrRegister()
-            ],
+            ),
           ),
-        ),
+          body: SizedBox(
+            height: MediaQuery.of(context).size.height - 100,
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  Container(
+                    color: AppColors.whiteSmoke,
+                    constraints: BoxConstraints(
+                      minHeight: MediaQuery.of(context).size.height - 170,
+                    ),
+                    child: widget.body,
+                  ),
+                  const Footer()
+                ],
+              ),
+            ),
+          )
       ),
-      body: SizedBox(
-        height: MediaQuery.of(context).size.height - 100,
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              Container(
-                color: AppColors.whiteSmoke,
-                constraints: BoxConstraints(
-                  minHeight: MediaQuery.of(context).size.height - 170,
-                ),
-                child: widget.body,
-              ),
-              const Footer()
-            ],
-          ),
-        ),
-      )
     );
   }
 

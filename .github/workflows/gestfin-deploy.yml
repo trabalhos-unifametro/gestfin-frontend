@@ -29,6 +29,9 @@ jobs:
       - name: Build for web (Release)
         run: flutter build web --release --base-href /
 
+      - name: Copiando CNAME para pasta de build
+        run: cp CNAME ./build/web/
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:

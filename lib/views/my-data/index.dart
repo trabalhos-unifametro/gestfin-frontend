@@ -245,160 +245,161 @@ class _MyDataPageState extends State<MyDataPage> {
   @override
   Widget build(BuildContext context) {
     return BaseLayout(
-        body: Column(
-          children: [
-            Container(
-              padding: const EdgeInsets.symmetric(horizontal: 30),
-              width: MediaQuery.of(context).size.width,
-              constraints: const BoxConstraints(
-                minHeight: 300,
-              ),
-              decoration: const BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage('images/png/banner-homepage.png'),
-                  fit: BoxFit.cover,
-                ),
-              ),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisSize: MainAxisSize.max,
-                children: [
-                  Text('Meus dados', style: GoogleFonts.poppins(fontSize: 25, color: AppColors.whiteSmoke, fontWeight: FontWeight.bold),),
-                ],
+      title: "Meus dados",
+      body: Column(
+        children: [
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 30),
+            width: MediaQuery.of(context).size.width,
+            constraints: const BoxConstraints(
+              minHeight: 300,
+            ),
+            decoration: const BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage('images/png/banner-homepage.png'),
+                fit: BoxFit.cover,
               ),
             ),
-            Container(
-              padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 30),
-              width: MediaQuery.of(context).size.width,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Container(
-                      padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 20),
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(5),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisSize: MainAxisSize.max,
+              children: [
+                Text('Meus dados', style: GoogleFonts.poppins(fontSize: 25, color: AppColors.whiteSmoke, fontWeight: FontWeight.bold),),
+              ],
+            ),
+          ),
+          Container(
+            padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 30),
+            width: MediaQuery.of(context).size.width,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Container(
+                    padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 20),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(5),
+                    ),
+                    child: Form(
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Flexible(
+                            flex: 8,
+                            child: Column(
+                              children: [
+                                Input(
+                                  fillColor: editName ? AppColors.whiteSmoke : Colors.black.withOpacity(0.5),
+                                  isEnabled: editName,
+                                  controller: name,
+                                  hintText: 'Nome completo do usuário',
+                                  hasSuffix: true,
+                                  suffixWithBorder: true,
+                                  onTapSuffixIcon: onTapInputName,
+                                  suffixIconData: editName ? MdiIcons.checkAll : MdiIcons.pencil,
+                                ),
+                                const SizedBox(height: 30,),
+                                Row(
+                                  children: [
+                                    Flexible(
+                                      flex: 3,
+                                      child: Select(
+                                        items: genders,
+                                        selectedValue: selectedValue,
+                                        hintText: 'Gênero',
+                                        onChanged: onChangedSelectGender,
+                                        hasSuffix: true,
+                                        suffixWithBorder: true,
+                                        onTapSuffixIcon: onTapSelectGender,
+                                        isEnabled: editGender,
+                                        fillColor: AppColors.whiteSmoke,
+                                        suffixIconData: editGender ? MdiIcons.checkAll : MdiIcons.pencil,
+                                      ),
+                                    ),
+                                    const SizedBox(width: 30,),
+                                    Flexible(
+                                      flex: 4,
+                                      child: Input(
+                                        fillColor: editCell ? AppColors.whiteSmoke : Colors.black.withOpacity(0.5),
+                                        isEnabled: editCell,
+                                        controller: cellphone,
+                                        hintText: '(00) 0 0000-0000',
+                                        hasSuffix: true,
+                                        suffixWithBorder: true,
+                                        onTapSuffixIcon: onTapInputCell,
+                                        suffixIconData: editCell ? MdiIcons.checkAll : MdiIcons.pencil,
+                                        inputFormatters: [maskCell],
+                                        type: TextInputType.phone,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                const SizedBox(height: 30,),
+                                Input(
+                                  fillColor: editDate ? AppColors.whiteSmoke : Colors.black.withOpacity(0.5),
+                                  isEnabled: editDate,
+                                  controller: dateBirth,
+                                  hintText: 'Data de nascimento: DD/MM/AAAA',
+                                  hasSuffix: true,
+                                  suffixWithBorder: true,
+                                  onTapSuffixIcon: onTapInputDate,
+                                  suffixIconData: editDate ? MdiIcons.checkAll : MdiIcons.pencil,
+                                  inputFormatters: [maskDateBirth],
+                                  type: TextInputType.datetime,
+                                ),
+                              ],
+                            ),
+                          ),
+                          const SizedBox(width: 30,),
+                          Flexible(
+                            flex: 4,
+                            child: Column(
+                              children: [
+                                Input(
+                                  fillColor: editEmail ? AppColors.whiteSmoke : Colors.black.withOpacity(0.5),
+                                  isEnabled: editEmail,
+                                  controller: email,
+                                  hintText: 'Email',
+                                  hasSuffix: true,
+                                  suffixWithBorder: true,
+                                  onTapSuffixIcon: onTapInputEmail,
+                                  suffixIconData: editEmail ? MdiIcons.checkAll : MdiIcons.pencil,
+                                ),
+                                const SizedBox(height: 30,),
+                                Input(
+                                  fillColor: editTel ? AppColors.whiteSmoke : Colors.black.withOpacity(0.5),
+                                  isEnabled: editTel,
+                                  controller: telephone,
+                                  hintText: '(00) 0000-0000',
+                                  hasSuffix: true,
+                                  suffixWithBorder: true,
+                                  onTapSuffixIcon: onTapInputTel,
+                                  suffixIconData: editTel ? MdiIcons.checkAll : MdiIcons.pencil,
+                                  inputFormatters: [maskTel],
+                                  type: TextInputType.phone,
+                                ),
+                                const SizedBox(height: 30,),
+                                Button(
+                                  onPressed: () {
+                                    context.go('/redefinir-senha');
+                                  },
+                                  title: 'Redefinir minha senha'
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
                       ),
-                      child: Form(
-                        child: Row(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Flexible(
-                              flex: 8,
-                              child: Column(
-                                children: [
-                                  Input(
-                                    fillColor: editName ? AppColors.whiteSmoke : Colors.black.withOpacity(0.5),
-                                    isEnabled: editName,
-                                    controller: name,
-                                    hintText: 'Nome completo do usuário',
-                                    hasSuffix: true,
-                                    suffixWithBorder: true,
-                                    onTapSuffixIcon: onTapInputName,
-                                    suffixIconData: editName ? MdiIcons.checkAll : MdiIcons.pencil,
-                                  ),
-                                  const SizedBox(height: 30,),
-                                  Row(
-                                    children: [
-                                      Flexible(
-                                        flex: 3,
-                                        child: Select(
-                                          items: genders,
-                                          selectedValue: selectedValue,
-                                          hintText: 'Gênero',
-                                          onChanged: onChangedSelectGender,
-                                          hasSuffix: true,
-                                          suffixWithBorder: true,
-                                          onTapSuffixIcon: onTapSelectGender,
-                                          isEnabled: editGender,
-                                          fillColor: AppColors.whiteSmoke,
-                                          suffixIconData: editGender ? MdiIcons.checkAll : MdiIcons.pencil,
-                                        ),
-                                      ),
-                                      const SizedBox(width: 30,),
-                                      Flexible(
-                                        flex: 4,
-                                        child: Input(
-                                          fillColor: editCell ? AppColors.whiteSmoke : Colors.black.withOpacity(0.5),
-                                          isEnabled: editCell,
-                                          controller: cellphone,
-                                          hintText: '(00) 0 0000-0000',
-                                          hasSuffix: true,
-                                          suffixWithBorder: true,
-                                          onTapSuffixIcon: onTapInputCell,
-                                          suffixIconData: editCell ? MdiIcons.checkAll : MdiIcons.pencil,
-                                          inputFormatters: [maskCell],
-                                          type: TextInputType.phone,
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                  const SizedBox(height: 30,),
-                                  Input(
-                                    fillColor: editDate ? AppColors.whiteSmoke : Colors.black.withOpacity(0.5),
-                                    isEnabled: editDate,
-                                    controller: dateBirth,
-                                    hintText: 'Data de nascimento: DD/MM/AAAA',
-                                    hasSuffix: true,
-                                    suffixWithBorder: true,
-                                    onTapSuffixIcon: onTapInputDate,
-                                    suffixIconData: editDate ? MdiIcons.checkAll : MdiIcons.pencil,
-                                    inputFormatters: [maskDateBirth],
-                                    type: TextInputType.datetime,
-                                  ),
-                                ],
-                              ),
-                            ),
-                            const SizedBox(width: 30,),
-                            Flexible(
-                              flex: 4,
-                              child: Column(
-                                children: [
-                                  Input(
-                                    fillColor: editEmail ? AppColors.whiteSmoke : Colors.black.withOpacity(0.5),
-                                    isEnabled: editEmail,
-                                    controller: email,
-                                    hintText: 'Email',
-                                    hasSuffix: true,
-                                    suffixWithBorder: true,
-                                    onTapSuffixIcon: onTapInputEmail,
-                                    suffixIconData: editEmail ? MdiIcons.checkAll : MdiIcons.pencil,
-                                  ),
-                                  const SizedBox(height: 30,),
-                                  Input(
-                                    fillColor: editTel ? AppColors.whiteSmoke : Colors.black.withOpacity(0.5),
-                                    isEnabled: editTel,
-                                    controller: telephone,
-                                    hintText: '(00) 0000-0000',
-                                    hasSuffix: true,
-                                    suffixWithBorder: true,
-                                    onTapSuffixIcon: onTapInputTel,
-                                    suffixIconData: editTel ? MdiIcons.checkAll : MdiIcons.pencil,
-                                    inputFormatters: [maskTel],
-                                    type: TextInputType.phone,
-                                  ),
-                                  const SizedBox(height: 30,),
-                                  Button(
-                                    onPressed: () {
-                                      context.go('/redefinir-senha');
-                                    },
-                                    title: 'Redefinir minha senha'
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
-                      )
-                  )
-                ],
-              ),
+                    )
+                )
+              ],
             ),
-          ],
-        )
+          ),
+        ],
+      )
     );
   }
 }

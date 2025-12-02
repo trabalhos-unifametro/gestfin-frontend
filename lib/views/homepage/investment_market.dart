@@ -136,49 +136,50 @@ class _InvestmentmarketPageState extends State<InvestmentmarketPage> {
   @override
   Widget build(BuildContext context) {
     return BaseLayout(
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Container(
-              padding: const EdgeInsets.symmetric(horizontal: 30),
-              width: MediaQuery.of(context).size.width,
-              constraints: const BoxConstraints(
-                minHeight: 300,
-              ),
-              decoration: const BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage('images/png/banner-criptos.png'),
-                  fit: BoxFit.cover,
-                ),
-              ),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisSize: MainAxisSize.max,
-                children: [
-                  Text('Criptomoedas e Ações', style: GoogleFonts.poppins(fontSize: 25, color: AppColors.whiteSmoke, fontWeight: FontWeight.bold),),
-                  Text('Aqui você irá poder ver as pirncipais ações, criptos e as variações em tempo real.', style: GoogleFonts.poppins(fontSize: 18, color: AppColors.whiteSmoke),),
-                ],
+      title: "Criptomoedas",
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 30),
+            width: MediaQuery.of(context).size.width,
+            constraints: const BoxConstraints(
+              minHeight: 300,
+            ),
+            decoration: const BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage('images/png/banner-criptos.png'),
+                fit: BoxFit.cover,
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 30),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text('Principais criptomoedas', style: GoogleFonts.poppins(fontSize: 22),),
-                  const SizedBox(height: 10,),
-                  TableSimple(
-                    sHeaders: headerCryptoCurrency,
-                    wItems: itemsCryptoCurrency,
-                  )
-                ],
-              ),
-            )
-          ],
-        )
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisSize: MainAxisSize.max,
+              children: [
+                Text('Criptomoedas e Ações', style: GoogleFonts.poppins(fontSize: 25, color: AppColors.whiteSmoke, fontWeight: FontWeight.bold),),
+                Text('Aqui você irá poder ver as pirncipais ações, criptos e as variações em tempo real.', style: GoogleFonts.poppins(fontSize: 18, color: AppColors.whiteSmoke),),
+              ],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 30),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text('Principais criptomoedas', style: GoogleFonts.poppins(fontSize: 22),),
+                const SizedBox(height: 10,),
+                TableSimple(
+                  sHeaders: headerCryptoCurrency,
+                  wItems: itemsCryptoCurrency,
+                )
+              ],
+            ),
+          )
+        ],
+      )
     );
   }
 }

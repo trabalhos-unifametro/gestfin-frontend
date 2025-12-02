@@ -15,6 +15,7 @@ class _InvestmentSuggestionsPageState extends State<InvestmentSuggestionsPage> {
   @override
   Widget build(BuildContext context) {
     return BaseLayout(
+        title: "Investimentos",
         body: Column(
           children: [
             Container(

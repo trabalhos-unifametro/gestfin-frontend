@@ -15,7 +15,8 @@ class _BasicMethodPageState extends State<BasicMethodPage> {
   @override
   Widget build(BuildContext context) {
     return BaseLayout(
-        body: Column(
+      title: "Método simples - 50% 30% 20%",
+      body: Column(
           children: [
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 30),

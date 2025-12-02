@@ -15,7 +15,8 @@ class _AboutPageState extends State<AboutPage> {
   @override
   Widget build(BuildContext context) {
     return BaseLayout(
-        body: Column(
+      title: "Sobre nós",
+      body: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(

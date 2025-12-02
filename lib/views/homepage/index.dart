@@ -18,6 +18,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return BaseLayout(
+      title: "Página inicial",
       body: Column(
         children: [
           Container(

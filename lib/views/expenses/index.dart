@@ -15,33 +15,34 @@ class _ExpensesPageState extends State<ExpensesPage> {
   @override
   Widget build(BuildContext context) {
     return BaseLayout(
-        body: Column(
-          children: [
-            Container(
-              padding: const EdgeInsets.symmetric(horizontal: 30),
-              width: MediaQuery.of(context).size.width,
-              constraints: const BoxConstraints(
-                minHeight: 300,
-              ),
-              decoration: const BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage('images/png/banner-despesas.png'),
-                  fit: BoxFit.cover,
-                ),
-              ),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisSize: MainAxisSize.max,
-                children: [
-                  Text('Organizar despesas', style: GoogleFonts.poppins(fontSize: 25, color: AppColors.whiteSmoke, fontWeight: FontWeight.bold),),
-                  Text('Adicione primeiro a média de dinheiro que você recebe todo mês e logo após,', style: GoogleFonts.poppins(fontSize: 18, color: AppColors.whiteSmoke),),
-                  Text('adicione as despesas mensais, tais como, conta de luz, água, telefone e etc.', style: GoogleFonts.poppins(fontSize: 18, color: AppColors.whiteSmoke),)
-                ],
+      title: "Minhas Despesas",
+      body: Column(
+        children: [
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 30),
+            width: MediaQuery.of(context).size.width,
+            constraints: const BoxConstraints(
+              minHeight: 300,
+            ),
+            decoration: const BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage('images/png/banner-despesas.png'),
+                fit: BoxFit.cover,
               ),
             ),
-          ],
-        )
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisSize: MainAxisSize.max,
+              children: [
+                Text('Organizar despesas', style: GoogleFonts.poppins(fontSize: 25, color: AppColors.whiteSmoke, fontWeight: FontWeight.bold),),
+                Text('Adicione primeiro a média de dinheiro que você recebe todo mês e logo após,', style: GoogleFonts.poppins(fontSize: 18, color: AppColors.whiteSmoke),),
+                Text('adicione as despesas mensais, tais como, conta de luz, água, telefone e etc.', style: GoogleFonts.poppins(fontSize: 18, color: AppColors.whiteSmoke),)
+              ],
+            ),
+          ),
+        ],
+      )
     );
   }
 }
