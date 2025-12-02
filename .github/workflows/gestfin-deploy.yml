@@ -3,7 +3,7 @@ name: Gestfin Web Deploy
 on:
   push:
     branches:
-      - 'v*'
+      - 'v*.*.*'
 
 permissions:
   contents: write
