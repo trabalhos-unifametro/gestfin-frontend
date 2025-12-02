@@ -1,6 +1,6 @@
 # gestfin_frontend
 
-A new Flutter project.
+É um projeto WEB para a Faculdade, voltado para educação financeira.
 
 ## Getting Started
 
