@@ -32,6 +32,9 @@ jobs:
       - name: Build for web (Release)
         run: flutter build web --release --base-href /
 
+      - name: Forçar cópia da pasta images para o build/web/assets
+        run: cp -r assets/images ./build/web/assets/
+
       - name: Copiando CNAME para pasta de build
         run: cp CNAME ./build/web/
 
