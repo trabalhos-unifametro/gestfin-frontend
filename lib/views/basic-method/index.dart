@@ -26,7 +26,7 @@ class _BasicMethodPageState extends State<BasicMethodPage> {
               ),
               decoration: const BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage('images/png/banner-metodo-basico.png'),
+                  image: AssetImage('images/banner-metodo-basico.png'),
                   fit: BoxFit.cover,
                 ),
               ),

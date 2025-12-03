@@ -256,7 +256,7 @@ class _MyDataPageState extends State<MyDataPage> {
             ),
             decoration: const BoxDecoration(
               image: DecorationImage(
-                image: AssetImage('images/png/banner-homepage.png'),
+                image: AssetImage('images/banner-homepage.png'),
                 fit: BoxFit.cover,
               ),
             ),

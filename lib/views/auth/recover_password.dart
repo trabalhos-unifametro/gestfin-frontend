@@ -45,7 +45,7 @@ class _RecoverPasswordPageState extends State<RecoverPasswordPage> {
         height: MediaQuery.of(context).size.height,
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('images/png/background-auth.png'),
+            image: AssetImage('images/background-auth.png'),
             fit: BoxFit.cover,
           ),
         ),
@@ -61,7 +61,7 @@ class _RecoverPasswordPageState extends State<RecoverPasswordPage> {
               MouseRegion(
                 cursor: SystemMouseCursors.click,
                 child: GestureDetector(
-                  child: Image.asset('images/png/logo.png', fit: BoxFit.cover, width: 220,),
+                  child: Image.asset('images/logo.png', fit: BoxFit.cover, width: 220,),
                   onTap: () {
                     context.go('/');
                   },

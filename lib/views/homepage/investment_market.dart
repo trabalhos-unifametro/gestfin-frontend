@@ -149,7 +149,7 @@ class _InvestmentmarketPageState extends State<InvestmentmarketPage> {
             ),
             decoration: const BoxDecoration(
               image: DecorationImage(
-                image: AssetImage('images/png/banner-criptos.png'),
+                image: AssetImage('images/banner-criptos.png'),
                 fit: BoxFit.cover,
               ),
             ),

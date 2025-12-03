@@ -26,7 +26,7 @@ class _ExpensesPageState extends State<ExpensesPage> {
             ),
             decoration: const BoxDecoration(
               image: DecorationImage(
-                image: AssetImage('images/png/banner-despesas.png'),
+                image: AssetImage('images/banner-despesas.png'),
                 fit: BoxFit.cover,
               ),
             ),

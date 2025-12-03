@@ -26,7 +26,7 @@ class _GoalsPageState extends State<GoalsPage> {
             ),
             decoration: const BoxDecoration(
               image: DecorationImage(
-                image: AssetImage('images/png/banner-objetivos.png'),
+                image: AssetImage('images/banner-objetivos.png'),
                 fit: BoxFit.cover,
               ),
             ),

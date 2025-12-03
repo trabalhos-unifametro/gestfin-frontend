@@ -26,7 +26,7 @@ class _InvestmentSuggestionsPageState extends State<InvestmentSuggestionsPage> {
               ),
               decoration: const BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage('images/png/banner-investimentos.png'),
+                  image: AssetImage('images/banner-investimentos.png'),
                   fit: BoxFit.cover,
                 ),
               ),

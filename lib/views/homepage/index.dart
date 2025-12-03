@@ -28,7 +28,7 @@ class _HomePageState extends State<HomePage> {
             ),
             decoration: const BoxDecoration(
               image: DecorationImage(
-                image: AssetImage('images/png/banner-homepage.png'),
+                image: AssetImage('images/banner-homepage.png'),
                 fit: BoxFit.cover,
               ),
             ),
@@ -171,7 +171,7 @@ class _HomePageState extends State<HomePage> {
                               color: AppColors.primary,
                               borderRadius: BorderRadius.circular(5),
                               image: const DecorationImage(
-                                image: AssetImage('images/png/bkg-card-service-1.png'),
+                                image: AssetImage('images/bkg-card-service-1.png'),
                                 fit: BoxFit.cover,
                               ),
                             ),
@@ -217,7 +217,7 @@ class _HomePageState extends State<HomePage> {
                               color: AppColors.primary,
                               borderRadius: BorderRadius.circular(5),
                               image: const DecorationImage(
-                                image: AssetImage('images/png/bkg-card-service-2.png'),
+                                image: AssetImage('images/bkg-card-service-2.png'),
                                 fit: BoxFit.cover,
                               ),
                             ),
@@ -263,7 +263,7 @@ class _HomePageState extends State<HomePage> {
                               color: AppColors.primary,
                               borderRadius: BorderRadius.circular(5),
                               image: const DecorationImage(
-                                image: AssetImage('images/png/bkg-card-service-3.png'),
+                                image: AssetImage('images/bkg-card-service-3.png'),
                                 fit: BoxFit.cover,
                               ),
                             ),
@@ -309,7 +309,7 @@ class _HomePageState extends State<HomePage> {
                               color: AppColors.primary,
                               borderRadius: BorderRadius.circular(5),
                               image: const DecorationImage(
-                                image: AssetImage('images/png/bkg-card-service-4.png'),
+                                image: AssetImage('images/bkg-card-service-4.png'),
                                 fit: BoxFit.cover,
                               ),
                             ),

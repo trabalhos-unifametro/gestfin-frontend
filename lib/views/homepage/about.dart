@@ -27,7 +27,7 @@ class _AboutPageState extends State<AboutPage> {
               ),
               decoration: const BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage('images/png/banner-sobre.png'),
+                  image: AssetImage('images/banner-sobre.png'),
                   fit: BoxFit.cover,
                 ),
               ),

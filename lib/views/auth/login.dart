@@ -130,7 +130,7 @@ class _LoginPageState extends State<LoginPage> {
         height: MediaQuery.of(context).size.height,
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('images/png/background-auth.png'),
+            image: AssetImage('images/background-auth.png'),
             fit: BoxFit.cover,
           ),
         ),
@@ -145,7 +145,7 @@ class _LoginPageState extends State<LoginPage> {
               child: MouseRegion(
                 cursor: SystemMouseCursors.click,
                 child: GestureDetector(
-                  child: Image.asset('images/png/logo.png', fit: BoxFit.cover, width: 220,),
+                  child: Image.asset('images/logo.png', fit: BoxFit.cover, width: 220,),
                   onTap: () {
                     context.go('/');
                   },

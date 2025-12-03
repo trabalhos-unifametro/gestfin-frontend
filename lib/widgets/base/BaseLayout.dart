@@ -60,7 +60,7 @@ class _BaseLayoutState extends State<BaseLayout> {
                   MouseRegion(
                     cursor: SystemMouseCursors.click,
                     child: GestureDetector(
-                      child: Image.asset('images/png/logo.png', fit: BoxFit.cover, width: 220,),
+                      child: Image.asset('images/logo.png', fit: BoxFit.cover, width: 220,),
                       onTap: () {
                         context.go('/');
                       },
